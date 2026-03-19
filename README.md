@@ -86,7 +86,7 @@ Open your browser at `http://localhost:5173`.
 ## 🗺️ Roadmap
 
 - [x] Setup
-- [ ] Die Component
+- [x] Die Component
 - [ ] Generate 10 random numbers
 - [ ] Map array to Die components
 - [ ] Roll dice button
