@@ -12,6 +12,10 @@ export default function Main() {
     return new Array(10).fill().map(() => Math.ceil(Math.random() * 6));
   }
 
+  function rollDice() {
+    setDice(generateAllNewDice)
+  }
+
   const [dice, setDice] = useState(generateAllNewDice)
 
   return (
@@ -19,10 +23,13 @@ export default function Main() {
       <div className="container">
         {
           dice.map(die =>
-            <Die value={die}/>
+            <Die value={die} />
           )
         }
       </div>
+
+      <button onClick={rollDice} className="roll">Roll</button>
+
     </main>
   )
 }
