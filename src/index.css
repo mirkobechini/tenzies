@@ -1,85 +1,106 @@
 * {
-    box-sizing: border-box;
-    padding: 1rem 0.5rem;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
-    background-color: #0B2434;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Karla', sans-serif;
-    
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  background-color: #0b2434;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
 }
 
 div#root {
   height: 100%;
   width: 50%;
-
+  min-width: 400px;
+  min-height: 400px;
 }
 
+/* #region Main Component*/
+
 main {
-  margin: 1rem;
-  background-color: #F5F5F5;
-  min-width: 320px;
-  min-height: 320px;
+  background-color: #f5f5f5;
+  height: 100%;
   border-radius: 10px;
   aspect-ratio: 1/1;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 2rem;
+}
 
+.title {
+  font-family: Karla;
+  font-weight: 700;
+  font-size: 25.6px;
+  line-height: 100%;
+  letter-spacing: -3%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.instructions {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 13.11px;
+  line-height: 100%;
+  letter-spacing: -3%;
+  text-align: center;
+  vertical-align: middle;
+  width: 90%;
 }
 
 .container {
-    display: grid;
-    grid-template: auto auto / repeat(5, 1fr);
-    gap: 1rem;
-  
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 40px;
 }
-
 
 button {
   font-family: Karla, sans-serif;
   cursor: pointer;
   font-weight: 700;
-
   border: none;
   border-radius: 3.8px;
 }
 
-.die {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
-    height: 50px;
-    width: 50px;
-    padding: 0.5rem;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+.roll {
+  background-color: #5035ff;
+  box-shadow: rgba(0, 0, 0, 0.18);
+  padding: 0.75rem 1.75rem;
 
-    /* text*/
-    font-size: 1.5rem;
-    color: #2B283A;
+  /* text */
+  color: #ffffff;
+  font-size: 1.2rem;
+  vertical-align: middle;
 }
 
+/* #endregion Main Component*/
 
-.roll {
-    background-color: #5035FF;
-    box-shadow: rgba(0, 0, 0, 0.18);
-    padding: 0.75rem 1.75rem;
+/* #region Die Component*/
+.die {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 
-    /* text */
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    vertical-align: middle;
+  /* text*/
+  font-size: 1.5rem;
+  color: #2b283a;
 }
 
 .held {
-    background-color: #59E391;
+  background-color: #59e391;
 }
+
+/* #endregion Die Component*/
