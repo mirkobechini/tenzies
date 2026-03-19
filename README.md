@@ -34,6 +34,7 @@ The goal of the game is to roll ten dice till all the dice are the same.
 - **React**: User Interface
 - **CSS**: Styling
 - **Vite**: Build tool
+- **nanoid**: Unique ID generation for dice
 - **Figma**: Design
 
 ---
@@ -90,7 +91,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Generate 10 random numbers
 - [x] Map array to Die components
 - [x] Roll dice button
-- [ ] Change dice to objects
+- [x] Change dice to objects
 - [ ] Styling held dice
 - [ ] Hold dice
 - [ ] End game
