@@ -12,7 +12,7 @@ The goal of the game is to roll ten dice till all the dice are the same.
 
 ![Example](./readme-images/example.png)
 
-![Figma Design](https://www.figma.com/design/FqsxRUhAaXM4ezddQK0CdR/Tenzies?node-id=20282-90&t=gLzHbFwOrOk82G8H-0)
+🔗 Design in Figma: [Link](https://www.figma.com/design/FqsxRUhAaXM4ezddQK0CdR/Tenzies?node-id=20282-90&t=gLzHbFwOrOk82G8H-0)
 
 ![GitHub stars](https://img.shields.io/github/stars/mirkobechini/tenzies?style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/mirkobechini/tenzies?style=flat-square)
