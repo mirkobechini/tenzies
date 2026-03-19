@@ -92,8 +92,8 @@ Open your browser at `http://localhost:5173`.
 - [x] Map array to Die components
 - [x] Roll dice button
 - [x] Change dice to objects
-- [ ] Styling held dice
-- [ ] Hold dice
+- [x] Styling held dice
+- [x] Hold dice
 - [ ] End game
 - [ ] Lazy State Initialization
 - [ ] New game

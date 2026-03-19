@@ -1,7 +1,7 @@
 export default function Die(props){
     return(
         <>
-            <button className="die">{props.value}</button>
+            <button onClick={()=>props.hold(props.id)} className={`die ${props.isHeld ? "held" : ""}`}>{props.value}</button>
         </>
     )
 }
