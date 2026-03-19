@@ -1,25 +1,27 @@
+import { useState } from "react";
+
 import Die from "./Die"
 
 
-function generateAllNewDice() {
-  return new Array(10).fill().map(() => Math.ceil(Math.random() * 6));
-}
-
 
 export default function Main() {
+
+
+
+  function generateAllNewDice() {
+    return new Array(10).fill().map(() => Math.ceil(Math.random() * 6));
+  }
+
+  const [dice, setDice] = useState(generateAllNewDice)
+
   return (
     <main>
       <div className="container">
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
-        <Die value={2} />
+        {
+          dice.map(die =>
+            <Die value={die}/>
+          )
+        }
       </div>
     </main>
   )

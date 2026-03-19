@@ -87,8 +87,8 @@ Open your browser at `http://localhost:5173`.
 
 - [x] Setup
 - [x] Die Component
-- [ ] Generate 10 random numbers
-- [ ] Map array to Die components
+- [x] Generate 10 random numbers
+- [x] Map array to Die components
 - [ ] Roll dice button
 - [ ] Change dice to objects
 - [ ] Styling held dice
