@@ -8,12 +8,18 @@ import Die from "./Die"
 
 export default function Main() {
 
+
+  const [dice, setDice] = useState(generateAllNewDice);
+
+  const gameWon = dice.every(die => die.isHeld && dice[0].value === die.value);
+
   
   function getRandomNumber() {
     return Math.ceil(Math.random() * 6);
   }
 
   function generateAllNewDice() {
+
     return new Array(10).fill(null)
       .map(() => ({
         id: nanoid(),
@@ -23,12 +29,17 @@ export default function Main() {
   }
 
   function rollDice() {
-    setDice(oldDice => oldDice.map(die =>
-      !die.isHeld ?
-        { ...die, value: getRandomNumber() } :
-        die
-    ))
+    if(gameWon){
+      setDice(generateAllNewDice());
+    } else {
+      setDice(oldDice => oldDice.map(die =>
+        !die.isHeld ?
+          { ...die, value: getRandomNumber() } :
+          die
+      ))
+    }
   }
+  
 
   function hold(id) {
     setDice(oldDice => oldDice.map(die =>
@@ -37,10 +48,6 @@ export default function Main() {
         die
     ))
   }
-
-  const [dice, setDice] = useState(generateAllNewDice);
-
-    const gameWon = dice.every(die => die.isHeld && dice[0].value === die.value);
 
 
   return (
@@ -58,7 +65,7 @@ export default function Main() {
         }
       </div>
 
-      <button onClick={rollDice} className="roll">{gameWon?"New Game": "Roll" }</button>
+      <button onClick={rollDice} className="roll">{gameWon ? "New Game" : "Roll"}</button>
 
     </main>
   )
