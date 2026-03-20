@@ -94,7 +94,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Change dice to objects
 - [x] Styling held dice
 - [x] Hold dice
-- [ ] End game
+- [x] End game
 - [ ] Lazy State Initialization
 - [ ] New game
 - [ ] Accessibility Improvements
