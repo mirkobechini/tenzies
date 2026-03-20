@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
 
@@ -12,6 +12,14 @@ export default function Main() {
   const [dice, setDice] = useState(generateAllNewDice);
 
   const gameWon = dice.every(die => die.isHeld && dice[0].value === die.value);
+
+  const btnRefWon = useRef(null);
+
+  useEffect(() => {
+    if (gameWon) {
+      btnRefWon.current.focus();
+    }
+  }, [gameWon])
 
   
   function getRandomNumber() {
@@ -53,6 +61,9 @@ export default function Main() {
   return (
     <main>
       {gameWon && <Confetti/>}
+      <div aria-live="polite" className="sr-only">
+        {gameWon && <p>Congratulations! You won! Press the "New Game" button to play again.</p>}
+        </div>
       <h1 className="title">Tenzies</h1>
       <p className="instructions">
         Roll until all dice are the same. Click each die to freeze it at its current value between rolls.
@@ -65,7 +76,11 @@ export default function Main() {
         }
       </div>
 
-      <button onClick={rollDice} className="roll">{gameWon ? "New Game" : "Roll"}</button>
+      <button 
+      aria-label={`This is the ${gameWon ? "New Game" : "Roll"} button. Press to ${gameWon ? "start a new game" : "roll the dice"}`} 
+      ref={btnRefWon}
+      onClick={rollDice} 
+      className="roll">{gameWon ? "New Game" : "Roll"}</button>
 
     </main>
   )

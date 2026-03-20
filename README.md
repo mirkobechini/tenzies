@@ -96,7 +96,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Hold dice
 - [x] End game
 - [x] New game
-- [ ] Accessibility Improvements
+- [x] Accessibility Improvements
 - [ ] Deploy
 
 ---
