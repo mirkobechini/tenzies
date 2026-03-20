@@ -22,10 +22,7 @@ The goal of the game is to roll ten dice till all the dice are the same.
 
 ## 🌍 Demo
 
-<!-- Inserisci qui i link reali: URL del sito live (Vercel/Netlify/GitHub Pages) e una demo video o GIF del flusso principale. -->
-
-- Live: https://tuo-link-demo.com
-- Video/GIF: https://tuo-link-demo-video.com
+- Live: https://mirkobechini.github.io/tenzies/
 
 ---
 
@@ -35,6 +32,7 @@ The goal of the game is to roll ten dice till all the dice are the same.
 - **CSS**: Styling
 - **Vite**: Build tool
 - **nanoid**: Unique ID generation for dice
+- **react-confetti**: Confetti win animation
 - **Figma**: Design
 
 ---
@@ -97,7 +95,7 @@ Open your browser at `http://localhost:5173`.
 - [x] End game
 - [x] New game
 - [x] Accessibility Improvements
-- [ ] Deploy
+- [x] Deploy
 
 ---
 
